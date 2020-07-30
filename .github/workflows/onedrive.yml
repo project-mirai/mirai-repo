@@ -1,0 +1,21 @@
+name: Upload to Onedrive
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  upload:
+    name: Upload to Onedrive
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@master
+        with:
+          fetch-depth: 2
+
+      - name: Upload 
+        env:
+          OD_TOKEN: ${{ secrets.OD_TOKEN }}
+        run: onedrive/gitUploader
+
