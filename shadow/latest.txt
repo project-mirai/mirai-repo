@@ -1,0 +1,3 @@
+mirai-console:1.0-M4-dev-3
+mirai-console-pure:1.0-M4-dev-3
+mirai-core-qqandroid:1.2.2
